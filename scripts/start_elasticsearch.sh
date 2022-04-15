@@ -1,0 +1,1 @@
+sudo docker run -d -v /home/diepdaocs/PycharmProjects/vietnamese-news-crawler/data/elasticsearch:/usr/share/elasticsearch/data -p 9200:9200 -p 9300:9300 --name es elasticsearch:6.8.23

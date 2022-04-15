@@ -122,4 +122,5 @@ dmypy.json
 
 .idea
 data
+logs
 *.lock
