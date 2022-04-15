@@ -121,6 +121,7 @@ def parse_date_from_string(tagstring, webconfig):
         '%H:%M, %d/%m/%Y',
         "%H:%M' %d/%m/%Y",
         "%m/%d/%Y %I:%M:%S %p",
+        "%d-%m-%Y - %H:%M",
         "%d/%m/%Y - %H:%M",
         "%d-%m-%Y - %I:%M %p",
         "%d-%m-%Y - %H:%M %p",
