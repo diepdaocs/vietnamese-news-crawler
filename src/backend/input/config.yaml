@@ -2,16 +2,81 @@ days_to_crawl: 14
 loop_interval_for_new_keyword_accepted: 2
 maximum_topic_display_length: 20
 crawling_list:
-- CafeF:
+- VnEconomy:
     id_type: href
     browser_profile: ''
-    web_url: https://cafef.vn
+    web_url: https://vneconomy.vn
     timezone: Asia/Ho_Chi_Minh
     remove_date_tag_html: false
     remove_content_html: true
     use_index_number: false
-    remove_content_html_xpaths:
-    - .//ul[@class="tinlienquan"]
+    remove_content_html_xpaths: []
+    minimum_duration_between_crawls: 15
+    language: vietnamese
+    feature_image_xpath:
+    - //figure[@class="detail__avatar"]
+    - //figure[@class="detail__avatar"]
+    extract_xpath:
+    - ./text()
+    - ./@title
+    topics_xpath:
+    - //a[text()]
+    - //a[@title]
+    skip_checking_topic_length: false
+    display_browser: false
+    sapo_xpath:
+    - //h2[@class="detail__summary"]
+    - //h2[@class="detail__summary"]
+    get_publish_date_as_crawl_date: false
+    browser_fast_load: true
+    skip_repeat_topic: true
+    use_browser: false
+    date_place: detail_page
+    ignore_topic_not_have_publish_date: true
+    last_run: 15/04/2022 14:15
+    contain: ''
+    crawl_url: https://vneconomy.vn
+    output_html: false
+    get_topic_from_link: true
+    date_xpath:
+    - //div[@class="detail__meta"]
+    - //div[@class="detail__meta"]
+    topic_type: href
+    maximum_url: 50
+    get_detail_content: true
+    content_xpath:
+    - //div[@class="detail__content"]
+    - //div[@class="detail__content"]
+    text_xpath:
+    - .//p[text()]
+    image_box_xpath:
+    - .//figure[@class="image-wrap"]
+    image_title_xpath:
+    - .//figcaption[@class="image-caption"]
+    video_box_xpath: []
+    video_title_xpath: []
+    audio_box_xpath: []
+    audio_title_xpath: []
+    avatar_type: url
+    avatar_url: https://media.vneconomy.vn/App_themes/images/logo.png?v=1.2.3.4.56789
+    avatar_xpath: ''
+    crawl_type: newspaper
+    url_pattern_re: https://vneconomy.vn
+    minimum_topic_length: 4
+    tags: []
+    only_quality_post: false
+    browser_timeout: 60
+    prevent_auto_redirect: false
+    remove_me: false
+- VnExpress:
+    id_type: href
+    browser_profile: ''
+    web_url: https://vnexpress.net
+    timezone: Asia/Ho_Chi_Minh
+    remove_date_tag_html: false
+    remove_content_html: true
+    use_index_number: false
+    remove_content_html_xpaths: []
     minimum_duration_between_crawls: 15
     language: vietnamese
     feature_image_xpath:
@@ -26,45 +91,49 @@ crawling_list:
     skip_checking_topic_length: false
     display_browser: false
     sapo_xpath:
-    - //h2[@class="sapo"]
-    - //h2[@class="sapo"]
+    - //p[@class="description"]
+    - //p[@class="description"]
     get_publish_date_as_crawl_date: false
     browser_fast_load: true
     skip_repeat_topic: true
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 15/04/2022 11:30
+    last_run: 15/04/2022 14:15
     contain: ''
-    crawl_url: https://cafef.vn
+    crawl_url: https://vnexpress.net
     output_html: false
     get_topic_from_link: true
     date_xpath:
-    - //span[@class="pdate"]
-    - //span[@class="pdate"]
+    - //span[@class="date"]
+    - //span[@class="date"]
     topic_type: href
-    maximum_url: 10
+    maximum_url: 50
     get_detail_content: true
     content_xpath:
-    - //div[@id="mainContent"]
-    - //div[@id="mainContent"]
+    - //*[@class="fck_detail "]
+    - //*[@class="fck_detail "]
     text_xpath:
-    - .//p[text()]
+    - ./p
+    - ./div/p
     image_box_xpath:
-    - .//div[@type="Photo"]
+    - .//figure
     image_title_xpath:
-    - .//div[@class="PhotoCMS_Caption"]/p
+    - ./figcaption
     video_box_xpath: []
     video_title_xpath: []
     audio_box_xpath: []
     audio_title_xpath: []
-    avatar_type: xpath
+    avatar_type: url
     avatar_url: ''
     avatar_xpath: ''
     crawl_type: newspaper
-    url_pattern_re: https://cafef.vn
+    url_pattern_re: https://vnexpress.net
     minimum_topic_length: 4
     tags: []
+    only_quality_post: false
+    browser_timeout: 60
+    prevent_auto_redirect: false
     remove_me: false
 - VTV:
     crawl_type: newspaper
@@ -130,18 +199,19 @@ crawling_list:
     - //h2[@class='sapo']
     use_index_number: false
     url_pattern_re: https://vtv.vn
-    last_run: 15/04/2022 11:30
+    last_run: 15/04/2022 14:15
     remove_me: false
     only_quality_post: false
-- VnExpress:
+- CafeF:
     id_type: href
     browser_profile: ''
-    web_url: https://vnexpress.net
+    web_url: https://cafef.vn
     timezone: Asia/Ho_Chi_Minh
     remove_date_tag_html: false
     remove_content_html: true
     use_index_number: false
-    remove_content_html_xpaths: []
+    remove_content_html_xpaths:
+    - .//ul[@class="tinlienquan"]
     minimum_duration_between_crawls: 15
     language: vietnamese
     feature_image_xpath:
@@ -156,117 +226,176 @@ crawling_list:
     skip_checking_topic_length: false
     display_browser: false
     sapo_xpath:
-    - //p[@class="description"]
-    - //p[@class="description"]
+    - //h2[@class="sapo"]
+    - //h2[@class="sapo"]
     get_publish_date_as_crawl_date: false
     browser_fast_load: true
     skip_repeat_topic: true
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 15/04/2022 11:30
+    last_run: 15/04/2022 14:15
     contain: ''
-    crawl_url: https://vnexpress.net
+    crawl_url: https://cafef.vn
     output_html: false
     get_topic_from_link: true
     date_xpath:
-    - //span[@class="date"]
-    - //span[@class="date"]
+    - //span[@class="pdate"]
+    - //span[@class="pdate"]
     topic_type: href
-    maximum_url: 50
+    maximum_url: 10
     get_detail_content: true
     content_xpath:
-    - //*[@class="fck_detail "]
-    - //*[@class="fck_detail "]
-    text_xpath:
-    - ./p
-    - ./div/p
-    image_box_xpath:
-    - .//figure
-    image_title_xpath:
-    - ./figcaption
-    video_box_xpath: []
-    video_title_xpath: []
-    audio_box_xpath: []
-    audio_title_xpath: []
-    avatar_type: url
-    avatar_url: ''
-    avatar_xpath: ''
-    crawl_type: newspaper
-    url_pattern_re: https://vnexpress.net
-    minimum_topic_length: 4
-    tags: []
-    only_quality_post: false
-    browser_timeout: 60
-    prevent_auto_redirect: false
-    remove_me: false
-- VnEconomy:
-    id_type: href
-    browser_profile: ''
-    web_url: https://vneconomy.vn
-    timezone: Asia/Ho_Chi_Minh
-    remove_date_tag_html: false
-    remove_content_html: true
-    use_index_number: false
-    remove_content_html_xpaths: []
-    minimum_duration_between_crawls: 15
-    language: vietnamese
-    feature_image_xpath:
-    - //figure[@class="detail__avatar"]
-    - //figure[@class="detail__avatar"]
-    extract_xpath:
-    - ./text()
-    - ./@title
-    topics_xpath:
-    - //a[text()]
-    - //a[@title]
-    skip_checking_topic_length: false
-    display_browser: false
-    sapo_xpath:
-    - //h2[@class="detail__summary"]
-    - //h2[@class="detail__summary"]
-    get_publish_date_as_crawl_date: false
-    browser_fast_load: true
-    skip_repeat_topic: true
-    use_browser: false
-    date_place: detail_page
-    ignore_topic_not_have_publish_date: true
-    last_run: 15/04/2022 11:30
-    contain: ''
-    crawl_url: https://vneconomy.vn
-    output_html: false
-    get_topic_from_link: true
-    date_xpath:
-    - //div[@class="detail__meta"]
-    - //div[@class="detail__meta"]
-    topic_type: href
-    maximum_url: 50
-    get_detail_content: true
-    content_xpath:
-    - //div[@class="detail__content"]
-    - //div[@class="detail__content"]
+    - //div[@id="mainContent"]
+    - //div[@id="mainContent"]
     text_xpath:
     - .//p[text()]
     image_box_xpath:
-    - .//figure[@class="image-wrap"]
+    - .//div[@type="Photo"]
     image_title_xpath:
-    - .//figcaption[@class="image-caption"]
+    - .//div[@class="PhotoCMS_Caption"]/p
     video_box_xpath: []
     video_title_xpath: []
     audio_box_xpath: []
     audio_title_xpath: []
-    avatar_type: url
-    avatar_url: https://media.vneconomy.vn/App_themes/images/logo.png?v=1.2.3.4.56789
+    avatar_type: xpath
+    avatar_url: ''
     avatar_xpath: ''
     crawl_type: newspaper
-    url_pattern_re: https://vneconomy.vn
+    url_pattern_re: https://cafef.vn
+    minimum_topic_length: 4
+    tags: []
+    remove_me: false
+- VietStock:
+    id_type: href
+    browser_profile: ''
+    web_url: https://vietstock.vn
+    timezone: Asia/Ho_Chi_Minh
+    remove_date_tag_html: false
+    remove_content_html: true
+    use_index_number: false
+    remove_content_html_xpaths: []
+    minimum_duration_between_crawls: 15
+    language: vietnamese
+    feature_image_xpath:
+    - //meta[@property="og:image"]/@content
+    - //meta[@property="og:image"]/@content
+    extract_xpath:
+    - ./text()
+    - ./@title
+    topics_xpath:
+    - //a[text()]
+    - //a[@title]
+    skip_checking_topic_length: false
+    display_browser: false
+    sapo_xpath:
+    - //p[@class="pHead"]
+    - //p[@class="pHead"]
+    get_publish_date_as_crawl_date: false
+    browser_fast_load: true
+    skip_repeat_topic: true
+    use_browser: false
+    date_place: detail_page
+    ignore_topic_not_have_publish_date: true
+    last_run: 15/04/2022 14:15
+    contain: ''
+    crawl_url: https://vietstock.vn
+    output_html: false
+    get_topic_from_link: true
+    date_xpath:
+    - //meta[@name="pubdate"]/@content
+    - //meta[@name="pubdate"]/@content
+    topic_type: href
+    maximum_url: 50
+    get_detail_content: true
+    content_xpath:
+    - //div[@itemprop="articleBody"]
+    - //div[@itemprop="articleBody"]
+    text_xpath:
+    - .//p[@class="pBody"]
+    image_box_xpath:
+    - .//img/@src
+    image_title_xpath: []
+    video_box_xpath: []
+    video_title_xpath: []
+    audio_box_xpath: []
+    audio_title_xpath: []
+    avatar_type: xpath
+    avatar_url: ''
+    avatar_xpath: ''
+    crawl_type: newspaper
+    url_pattern_re: https://vietstock.vn
     minimum_topic_length: 4
     tags: []
     only_quality_post: false
     browser_timeout: 60
     prevent_auto_redirect: false
     remove_me: false
-running_path: ~/docbao_crawler/
+- BaoDauTu:
+    id_type: href
+    browser_profile: ''
+    web_url: https://baodautu.vn
+    timezone: Asia/Ho_Chi_Minh
+    remove_date_tag_html: false
+    remove_content_html: true
+    use_index_number: false
+    remove_content_html_xpaths: []
+    minimum_duration_between_crawls: 15
+    language: vietnamese
+    feature_image_xpath:
+    - //*[@id="content_detail_news"]/table/tbody/tr[1]/td/img/@src
+    - //*[@id="content_detail_news"]/table/tbody/tr[1]/td/img/@src
+    extract_xpath:
+    - ./text()
+    - ./@title
+    topics_xpath:
+    - //a[text()]
+    - //a[@title]
+    skip_checking_topic_length: false
+    display_browser: false
+    sapo_xpath:
+    - //div[@class="sapo_detail"]
+    - //div[@class="sapo_detail"]
+    get_publish_date_as_crawl_date: false
+    browser_fast_load: true
+    skip_repeat_topic: true
+    use_browser: false
+    date_place: detail_page
+    ignore_topic_not_have_publish_date: true
+    last_run: 02/06/2019 21:56
+    contain: ''
+    crawl_url: https://baodautu.vn
+    output_html: false
+    get_topic_from_link: true
+    date_xpath:
+    - //span[@class="post-time"]
+    - //span[@class="post-time"]
+    topic_type: href
+    maximum_url: 50
+    get_detail_content: true
+    content_xpath:
+    - //div[@id="content_detail_news"]
+    - //div[@id="content_detail_news"]
+    text_xpath:
+    - .//p[text()]
+    image_box_xpath:
+    - .//img/@src
+    image_title_xpath: []
+    video_box_xpath: []
+    video_title_xpath: []
+    audio_box_xpath: []
+    audio_title_xpath: []
+    avatar_type: xpath
+    avatar_url: ''
+    avatar_xpath: ''
+    crawl_type: newspaper
+    url_pattern_re: https://baodautu.vn
+    minimum_topic_length: 4
+    tags: []
+    only_quality_post: false
+    browser_timeout: 60
+    prevent_auto_redirect: false
+running_path: ~/PycharmProjects/vietnamese-news-crawler
 number_of_trending_keywords: 25
 number_of_hot_keywords: 2000
 minimum_topic_length: 4
@@ -276,7 +405,7 @@ minimum_keyword_length_for_fast_growing_keyword_accepted: 2
 crawling_interval: 15
 minimum_freq_for_more_than_two_length_keyword_appear_in_hot_keywords: 5
 minimum_freq_series_for_fast_growing_keyword_accepted: 2
-max_crawler: 5
+max_crawler: 20
 category_list:
 - chính trị:
     index: 1
