@@ -2,6 +2,70 @@ days_to_crawl: 14
 loop_interval_for_new_keyword_accepted: 2
 maximum_topic_display_length: 20
 crawling_list:
+- CafeF:
+    id_type: href
+    browser_profile: ''
+    web_url: https://cafef.vn
+    timezone: Asia/Ho_Chi_Minh
+    remove_date_tag_html: false
+    remove_content_html: true
+    use_index_number: false
+    remove_content_html_xpaths:
+    - .//ul[@class="tinlienquan"]
+    minimum_duration_between_crawls: 15
+    language: vietnamese
+    feature_image_xpath:
+    - .//img/@src
+    - .//img/@src
+    extract_xpath:
+    - ./text()
+    - ./@title
+    topics_xpath:
+    - //a[text()]
+    - //a[@title]
+    skip_checking_topic_length: false
+    display_browser: false
+    sapo_xpath:
+    - //h2[@class="sapo"]
+    - //h2[@class="sapo"]
+    get_publish_date_as_crawl_date: false
+    browser_fast_load: true
+    skip_repeat_topic: true
+    use_browser: false
+    date_place: detail_page
+    ignore_topic_not_have_publish_date: true
+    last_run: 15/04/2022 07:00
+    contain: ''
+    crawl_url: https://cafef.vn
+    output_html: false
+    get_topic_from_link: true
+    date_xpath:
+    - //span[@class="pdate"]
+    - //span[@class="pdate"]
+    topic_type: href
+    maximum_url: 10
+    get_detail_content: true
+    content_xpath:
+    - //div[@id="mainContent"]
+    - //div[@id="mainContent"]
+    text_xpath:
+    - .//p[text()]
+    image_box_xpath:
+    - .//div[@type="Photo"]
+    image_title_xpath:
+    - .//div[@class="PhotoCMS_Caption"]/p
+    video_box_xpath: []
+    video_title_xpath: []
+    audio_box_xpath: []
+    audio_title_xpath: []
+    avatar_type: xpath
+    avatar_url: ''
+    avatar_xpath: ''
+    crawl_type: newspaper
+    url_pattern_re: https://cafef.vn
+    minimum_topic_length: 4
+    tags: []
+    remove_me: false
 - Vietnamnet:
     date_place: detail_page
     remove_content_html: true
@@ -21,7 +85,7 @@ crawling_list:
     - //div[@class='bold ArticleLead']
     - //div[@class='bold ArticleLead']
     browser_profile: ''
-    maximum_url: 10
+    maximum_url: 80
     language: vietnamese
     content_xpath:
     - //div[@class='ArticleContent']
@@ -41,7 +105,7 @@ crawling_list:
     crawl_type: newspaper
     crawl_url: https://vietnamnet.vn
     audio_box_xpath: []
-    last_run: 31/01/2021 04:11
+    last_run: 15/04/2022 07:00
     timezone: Asia/Ho_Chi_Minh
     feature_image_xpath:
     - .//img/@src
@@ -102,7 +166,7 @@ crawling_list:
     minimum_topic_length: 4
     avatar_url: http://ainewsobj.6112cf5e.viettel-cdn.vn/bangtin/a1e35547-1fd4-4331-aea0-fd1bc355635b_small.jpg
     image_title_text_xpath: ''
-    last_run: 31/01/2021 04:11
+    last_run: 15/04/2022 07:00
     audio_title_text: ''
     crawl_type: newspaper
     display_browser: false
@@ -204,7 +268,7 @@ crawling_list:
     - //h2[@class='sapo']
     use_index_number: false
     url_pattern_re: https://vtv.vn
-    last_run: 31/01/2021 04:11
+    last_run: 15/04/2022 07:00
     remove_me: false
     only_quality_post: false
 - Dân trí:
@@ -238,7 +302,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 31/01/2021 04:11
+    last_run: 15/04/2022 07:00
     contain: ''
     crawl_url: https://dantri.com.vn
     output_html: false
@@ -247,7 +311,7 @@ crawling_list:
     - //span[@class="dt-news__time"]
     - //span[@class="dt-news__time"]
     topic_type: href
-    maximum_url: 10
+    maximum_url: 50
     get_detail_content: true
     content_xpath:
     - //div[@class="dt-news__content"]
@@ -305,7 +369,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 31/01/2021 04:11
+    last_run: 15/04/2022 07:00
     contain: ''
     crawl_url: https://vnexpress.net
     output_html: false
@@ -314,7 +378,7 @@ crawling_list:
     - //span[@class="date"]
     - //span[@class="date"]
     topic_type: href
-    maximum_url: 10
+    maximum_url: 50
     get_detail_content: true
     content_xpath:
     - //*[@class="fck_detail "]

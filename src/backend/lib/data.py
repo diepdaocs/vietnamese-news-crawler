@@ -988,7 +988,7 @@ class ArticleManager:
                             avatar_xpath = webconfig.get_avatar_xpath()
                             avatar_url = webconfig.get_avatar_url()
 
-                            if avatar_type == 'xpath':
+                            if avatar_type == 'xpath' and avatar_xpath:
                                 try:
                                     avatar_url = str(detail_page_html_tree.xpath(avatar_xpath)[0])
                                 except:
