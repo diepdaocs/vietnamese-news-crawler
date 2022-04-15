@@ -20,6 +20,7 @@ sleep 1
 echo "Step 1: Ensure python3, pip3, venv, curl and php are installed"
 echo "__________________________________________________________________________"
 sleep 1
+sudo apt-add-repository ppa:ondrej/php
 sudo apt update
 sudo apt install python3
 sudo apt install python3-pip
