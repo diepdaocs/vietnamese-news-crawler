@@ -33,7 +33,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 02/06/2019 21:56
     contain: ''
     crawl_url: https://dantri.com.vn
     output_html: false
@@ -67,7 +67,6 @@ crawling_list:
     only_quality_post: false
     browser_timeout: 60
     prevent_auto_redirect: false
-    remove_me: false
 - TuoiTre:
     contain: ''
     image_title_xpath:
@@ -107,7 +106,7 @@ crawling_list:
     - //a[@title]
     text_xpath:
     - .//p[text()]
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     get_topic_from_link: true
     audio_box_xpath: []
     skip_repeat_topic: true
@@ -171,7 +170,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://baodautu.vn
     output_html: false
@@ -236,7 +235,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://vietstock.vn
     output_html: false
@@ -302,7 +301,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://cafef.vn
     output_html: false
@@ -398,7 +397,7 @@ crawling_list:
     - //h2[@class='sapo']
     use_index_number: false
     url_pattern_re: https://vtv.vn
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     remove_me: false
     only_quality_post: false
 - VnExpress:
@@ -432,7 +431,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://vnexpress.net
     output_html: false
@@ -499,7 +498,7 @@ crawling_list:
     use_browser: false
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://vneconomy.vn
     output_html: false
@@ -565,7 +564,7 @@ crawling_list:
     use_browser: true
     date_place: detail_page
     ignore_topic_not_have_publish_date: true
-    last_run: 17/04/2022 04:30
+    last_run: 17/04/2022 06:00
     contain: ''
     crawl_url: https://thanhnien.vn
     output_html: false
@@ -584,7 +583,7 @@ crawling_list:
     image_box_xpath:
     - .//table[@class="picture"]
     image_title_xpath:
-    - .//td[@class="caption"]
+    - .//td[@class="caption"]/p
     video_box_xpath: []
     video_title_xpath: []
     audio_box_xpath: []
