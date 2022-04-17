@@ -1,4 +1,4 @@
-- Tuổi Trẻ:
+- TuoiTre:
     contain: ''
     image_title_xpath:
     - .//div[@class='PhotoCMS_Caption']//node()[text()]

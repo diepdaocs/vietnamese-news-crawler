@@ -1,4 +1,4 @@
-- Cafebiz:
+- CafeBiz:
     id_type: href
     browser_profile: ''
     web_url: http://cafebiz.vn
@@ -46,11 +46,12 @@
     - //node()[@class="w640right"]
     - //node()[@class="w640right"]
     text_xpath:
-    - ./node()[@class="detail-content"]/p
+    - .//node()[@class="detail-content"]/p
     image_box_xpath:
     - //*[@id="mainDetail"]//center
     - .//node()[@type="Photo"]
-    image_title_xpath: []
+    image_title_xpath:
+    - .//node()[@class="PhotoCMS_Caption"]/p
     video_box_xpath: []
     video_title_xpath: []
     audio_box_xpath: []
