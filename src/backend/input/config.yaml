@@ -584,7 +584,7 @@ crawling_list:
     image_box_xpath:
     - .//table[@class="picture"]
     image_title_xpath:
-    - .//td[@class="caption"]/p
+    - .//td[@class="caption"]
     video_box_xpath: []
     video_title_xpath: []
     audio_box_xpath: []
