@@ -640,6 +640,8 @@ class ArticleManager:
         topic_word_list = []
         has_visit = False
 
+        feature_image = ''
+
         if(webconfig.get_topic_from_link()):
             a=True
             while a:
