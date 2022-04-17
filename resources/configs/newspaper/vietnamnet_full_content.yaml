@@ -1,4 +1,4 @@
-- Vietnamnet:
+- VietnamNet:
     date_place: detail_page
     remove_content_html: true
     prevent_auto_redirect: false
@@ -46,8 +46,8 @@
     - ./tbody/tr[2]/td
     use_index_number: false
     date_xpath:
-    - //span[@class="ArticleDate"]
-    - //span[@class="ArticleDate"]
+    - /html/body/div[1]/div[2]/div[1]/div[1]/div[2]/p/span
+    - /html/body/div[1]/div[2]/div[1]/div[1]/div[2]/p/span
     skip_repeat_topic: true
     web_url: https://vietnamnet.vn
     browser_timeout: 60
